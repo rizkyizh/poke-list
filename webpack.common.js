@@ -20,12 +20,30 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "images/",
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
+      cleanUrls: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/about.html",
+      filename: "pages/about.html",
+      cleanUrls: true,
     }),
   ],
 };
