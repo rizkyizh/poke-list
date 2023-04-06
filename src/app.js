@@ -1,9 +1,7 @@
 import "./styles/style.css";
 import "./script/component/AppBar.js";
+import "./script/component/Hero.js";
 // @ts-ignore
-import "./images/pokelogoball.png";
-import "./images/humburgerMenu.png";
-import "./images/humbuergerMenu-exit.png";
 
 import main from "./script/view/main.js";
 

@@ -14,6 +14,26 @@
   --color5: #7289da;
   --color6: #ee4e36;
   --color7: #ffd73e;
+
+  /* pokemon color */
+  --fire: #ee8130;
+  --grass: #7ac74c;
+  --eletric: #f7d02c;
+  --water: #6390f0;
+  --ground: #e2bf65;
+  --rock: #b6a136;
+  --fairy: #d685ad;
+  --poison: #a33ea1;
+  --bug: #a6b91a;
+  --dragon: #6f35fc;
+  --psychic: #f95587;
+  --flying: #a98ff3;
+  --fighting: #c22e28;
+  --normal: #a8a77a;
+  --ice: #96d9d6;
+  --ghost: #735797;
+  --dark: #705746;
+  --steel: #b7b7ce;
 }
 
 * .r6 {
@@ -30,6 +50,7 @@
   box-sizing: border-box;
   font-family: "pokemon", sans-serif;
   text-decoration: none;
+  transition: all 0.5s ease;
 }
 
 body {
@@ -41,75 +62,13 @@ body {
   height: inherit;
 }
 
-/* hero */
-
-.hero {
-  background-color: var(--color2);
-  min-height: 580px;
-  padding-bottom: 32px;
-}
-
-.hero .hero-bg {
-  /* bg pikachu */
-  background-image: url(../images/hero.svg);
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: 38px;
-}
-
-.hero-wrapper {
-  padding-top: 100px;
-  padding-right: 403px;
-}
-
-.hero-wrapper .hero-content {
-  max-width: 557px;
-}
-
-.hero-content .title {
-  font-size: 40px;
-  line-height: 60px;
-  letter-spacing: 0.3px;
-  font-style: normal;
-  font-weight: 400;
-  color: var(--color4);
-  margin-bottom: 32px;
-}
-
-.hero-content .description {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  /* or 162% */
-  margin-bottom: 32px;
-  color: var(--color4);
-}
-
-.hero-content .cta {
-  background-image: url("../images/home-start-btn.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-}
-.hero-content .cta:hover {
-  background-image: url("../images/home-start-btn-Hover.svg");
+.hide {
+  display: none;
 }
 
 /* global media query */
 @media (max-width: 960px) {
   .container {
     padding: 0 26px;
-  }
-
-  /* hero */
-  .hero .hero-bg {
-    margin-right: 26px;
-  }
-
-  .hero-content .description {
-    font-size: 12px;
   }
 }

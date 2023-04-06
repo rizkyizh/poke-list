@@ -1,3 +1,10 @@
+// @ts-ignore
+import pokelogoball from "../../images/pokelogoball.png";
+// @ts-ignore
+import humbrMenu from "../../images/humburgerMenu.png";
+// @ts-ignore
+import humbrMenuExit from "../../images/humbuergerMenu-exit.png";
+
 class AppBar extends HTMLElement {
   constructor() {
     super();
@@ -8,6 +15,7 @@ class AppBar extends HTMLElement {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
     }
     .container {
         max-width: 960px;
@@ -91,10 +99,6 @@ class AppBar extends HTMLElement {
           cursor: pointer;
         }
       
-        // .navbar-wrapper .active {
-        //   background-image: url("../images/humbuergerMenu-exit.png");
-        // }
-      
         .nav-list-wrapper {
           position: absolute;
           top: 80px;
@@ -151,20 +155,20 @@ class AppBar extends HTMLElement {
       <nav>
       <div class="container navbar-wrapper">
         <div class="logo">
-          <img src="../../images/pokelogoball.png" class="logo-icon" />
+          <img src="${pokelogoball}" class="logo-icon" />
           <h2 class="title-bar">
             <span class="r6">POKE</span><span class="r7">LIST</span>
           </h2>
         </div>
         <ul class="nav-list-wrapper hidden">
-          <li class="home" id="#"><a href="#">Home</a></li>
+          <li class="home" id="#"><a href="/">Home</a></li>
           <li class="start" id="#"><a href="#">Start</a></li>
           <li class="about" id="#"><a href="#">About</a></li>
           <li class="contact" id="#"><a href="#">Contact</a></li>
         </ul>
         <div class="hamburger-menu">
-            <img src="../../images/humbuergerMenu-exit.png" class="img-toggle hidden"/>
-            <img src="../../images/humburgerMenu.png" class="img-toggle-exit "/>
+            <img src="${humbrMenuExit}" class="img-toggle hidden"/>
+            <img src="${humbrMenu}" class="img-toggle-exit "/>
         </div>
       </div>
     </nav>
