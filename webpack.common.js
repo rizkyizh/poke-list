@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -48,6 +49,15 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/$/, to: "/index.html" },
+        { from: /^\/pages\/about$/, to: "/about.html" },
+        { from: /^\/pages\/start$/, to: "/start.html" },
+      ],
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
@@ -57,6 +67,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/about.html",
       filename: "pages/about.html",
+      cleanUrls: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/start.html",
+      filename: "pages/start.html",
       cleanUrls: true,
     }),
   ],

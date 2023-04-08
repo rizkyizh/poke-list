@@ -192,7 +192,7 @@ class Hero extends HTMLElement {
                 untuk memenuhi submission atau tugas akhir Belajar Fundamental
                 Front-End Web Development di Dicoding Academy
               </p>
-              <div class="cta" href="./pages/about.html"></div>
+              <div class="cta" href="./pages/start.html"></div>
             </div>
           </div>
         </div>
