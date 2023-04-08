@@ -6,14 +6,15 @@ class DataSource {
     results(data);
   };
 
-  static getPokemonImgPNG = async (url, res) => {
+  static getPokemonURLID = async (url, res, err) => {
     return fetch(url)
       .then((response) => {
         return response.json();
       })
       .then((resJson) => {
-        res(resJson.sprites["front_default"]);
-      });
+        res(resJson);
+      })
+      .catch((error) => err(error));
   };
 }
 

@@ -18,6 +18,26 @@ const countResults = (pokemonList) => {
 const renderPokeCard = (pokemonList) => {
   const cardField = document.querySelector(".content-main");
   const namaHoverEl = document.querySelector(".name-hover");
+  const colorType = {
+    fire: "#ee8130",
+    grass: "#7ac74c",
+    electric: "#f7d02c",
+    water: "#6390f0",
+    ground: "#e2bf65",
+    rock: "#b6a136",
+    fairy: "#d685ad",
+    poison: "#a33ea1",
+    bug: "#a6b91a",
+    dragon: "#6f35fc",
+    psychic: "#f95587",
+    flying: "#a98ff3",
+    fighting: "#c22e28",
+    normal: "#a8a77a",
+    ice: "#96d9d6",
+    ghost: "#735797",
+    dark: "#705746",
+    steel: "#b7b7ce",
+  };
 
   // @ts-ignore
   cardField.innerHTML = "";
@@ -27,9 +47,11 @@ const renderPokeCard = (pokemonList) => {
     const pokemonName = e.name;
     const pokemonId = e.url;
 
-    DataSource.getPokemonImgPNG(pokemonId, (img) => {
+    DataSource.getPokemonURLID(pokemonId, (res) => {
+      const img = res.sprites["front_default"];
+      const bgColorType = colorType[res.types[0].type.name];
       const card = `
-                <div class="poke-card" dataId="${pokemonName}" >
+                <div class="poke-card" dataId="${pokemonName}" style="background-color:${bgColorType}" >
                 <img src="${img}" />
                 <div class="poke-name">
                 <p>${pokemonName}</p>
@@ -53,15 +75,62 @@ const renderPokeCard = (pokemonList) => {
   });
 };
 
-const hoverCard = () => {
-  const cardEl = document.querySelector(".poke-card");
-  console.log(cardEl);
+const renderCardSearch = (res) => {
+  const cardField = document.querySelector(".content-main");
+  const namaHoverEl = document.querySelector(".name-hover");
+  // @ts-ignore
+  cardField.innerHTML = "";
+  const colorType = {
+    fire: "#ee8130",
+    grass: "#7ac74c",
+    electric: "#f7d02c",
+    water: "#6390f0",
+    ground: "#e2bf65",
+    rock: "#b6a136",
+    fairy: "#d685ad",
+    poison: "#a33ea1",
+    bug: "#a6b91a",
+    dragon: "#6f35fc",
+    psychic: "#f95587",
+    flying: "#a98ff3",
+    fighting: "#c22e28",
+    normal: "#a8a77a",
+    ice: "#96d9d6",
+    ghost: "#735797",
+    dark: "#705746",
+    steel: "#b7b7ce",
+  };
+  const img = res.sprites["front_default"];
+  const bgColorType = colorType[res.types[0].type.name];
+  const pokemonName = res.forms[0].name;
 
-  //   cardEl?.addEventListener("click", function () {
-  //     console.log("ok");
-  //     const cek = cardEl.getAttribute("dataId");
-  //     console.log(cek);
-  //   });
+  let card = `
+              <div class="poke-card" dataId="${pokemonName}" style="background-color:${bgColorType}" >
+              <img src="${img}" />
+              <div class="poke-name">
+              <p>${pokemonName}</p>
+              </div>
+              </div>`;
+
+  cardField?.insertAdjacentHTML("beforeend", card);
+
+  let cardEl = document.querySelectorAll(".poke-card");
+  cardEl.forEach((e) => {
+    e.addEventListener("mouseover", function () {
+      const namaPoke = e.getAttribute("dataId");
+      // @ts-ignore
+      namaHoverEl.innerHTML = namaPoke;
+    });
+    e.addEventListener("click", function () {
+      console.log(e.getAttribute("dataId"));
+    });
+  });
 };
 
-export { countResults, renderPokeCard, hoverCard };
+const renderError = (error) => {
+  const contentMain = document.querySelector(".content-main");
+  // @ts-ignore
+  contentMain.innerHTML = error;
+};
+
+export { countResults, renderPokeCard, renderCardSearch, renderError };
