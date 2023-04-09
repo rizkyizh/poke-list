@@ -1,38 +1,21 @@
 import "../../images/nextButton.png";
 import "../../images/searchbutton.png";
+import "../../images/mobile-pikachhu.png";
 import DataSource from "../controller/DataSource.js";
 import {
   countResults,
-  renderPokeCard,
-  renderCardSearch,
-  renderError,
+  renderPokeCardList,
+  renderCard,
+  searchPokeByIdName,
 } from "../view/util.js";
 
 const main = () => {
-  const btnSearchEl = document.querySelector("input");
-  const btnSubmit = document.querySelector("button[type=submit]");
-  btnSubmit?.addEventListener("click", function () {
-    const id = btnSearchEl?.value;
-
-    if (id == "") {
-      renderError("data is not found");
-    } else {
-      DataSource.getPokemonURLID(
-        `https://pokeapi.co/api/v2/pokemon/${id}/`,
-        (res) => {
-          renderCardSearch(res);
-        },
-        (err) => renderError("data Not Found")
-      );
-    }
-  });
-
-  DataSource.getPokemonList(renderPokeCard, "pokemon/?offset=0&limit=12");
+  DataSource.getPokemonList(renderPokeCardList, "pokemon/?offset=0&limit=12");
   DataSource.getPokemonList(countResults, "pokemon/?offset=0&limit=12");
 
   const renderNextPreviousPokeList = (offset) => {
     DataSource.getPokemonList(
-      renderPokeCard,
+      renderPokeCardList,
       `pokemon/?offset=${offset}&limit=12`
     );
   };
@@ -87,6 +70,7 @@ const main = () => {
   };
 
   nextPreviousPage();
+  searchPokeByIdName();
 };
 
 export default main;
