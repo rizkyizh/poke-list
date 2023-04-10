@@ -6,7 +6,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/",
   },
   module: {
     rules: [
@@ -66,12 +65,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/about.html",
-      filename: "pages/about.html",
+      filename: "about.html",
       cleanUrls: true,
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/start.html",
-      filename: "pages/start.html",
+      filename: "start.html",
       cleanUrls: true,
     }),
   ],

@@ -1,13 +1,8 @@
-import "../../images/nextButton.png";
-import "../../images/searchbutton.png";
-import "../../images/mobile-pikachhu.png";
-import "../../images/pokeapi.png";
-import "../../images/photo.png";
-import "../../images/fb.png";
-import "../../images/twit.png";
-import "../../images/mail.png";
-import "../../images/ig.png";
-import "../../images/githubrepo.png";
+// @ts-ignore
+import btnNextPrevious from "../../images/nextButton.png";
+// @ts-ignore
+import searchBtn from "../../images/searchbutton.png";
+
 import DataSource from "../controller/DataSource.js";
 import {
   countResults,
@@ -17,6 +12,9 @@ import {
 } from "../view/util.js";
 
 const main = () => {
+  const btnSearchEl = document.querySelector(".searchbutton");
+  btnSearchEl?.setAttribute("src", searchBtn);
+
   DataSource.getPokemonList(renderPokeCardList, "pokemon/?offset=0&limit=12");
   DataSource.getPokemonList(countResults, "pokemon/?offset=0&limit=12");
 
@@ -30,6 +28,8 @@ const main = () => {
   const btnNext = document.querySelector(".next-button");
   const btnPrevious = document.querySelector(".previous-button");
   const pagesNumbers = document.querySelectorAll(".page-number");
+  btnNext?.setAttribute("src", btnNextPrevious);
+  btnPrevious?.setAttribute("src", btnNextPrevious);
 
   const nextPreviousPage = () => {
     const pagesMap = [0, 0, 1, 2, 3];

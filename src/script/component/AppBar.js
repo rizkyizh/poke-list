@@ -161,9 +161,9 @@ class AppBar extends HTMLElement {
           </h2>
         </div>
         <ul class="nav-list-wrapper hidden">
-          <li class="home" ><a href="/">Home</a></li>
-          <li class="start" ><a href="/pages/start.html">Start</a></li>
-          <li class="about" ><a href="/pages/about.html">About</a></li>
+          <li class="home" ><a href="index.html">Home</a></li>
+          <li class="start" ><a href="./start.html">Start</a></li>
+          <li class="about" ><a href="./about.html">About</a></li>
           <li class="contact" ><a href="#">Contact</a></li>
         </ul>
         <div class="hamburger-menu">

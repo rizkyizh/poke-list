@@ -1,4 +1,6 @@
 import DataSource from "../controller/DataSource.js";
+// @ts-ignore
+import pikaMobile from "../../images/mobile-pikachhu.png";
 
 const countResults = (pokemonList) => {
   const footerContent = document.querySelector(".content-footer");
@@ -165,7 +167,7 @@ const renderError = (error) => {
   const imgNotFound = document.createElement("img");
   messageWrapper.setAttribute("class", "error-message");
   pMessage.innerHTML = "404 Not Found";
-  imgNotFound.setAttribute("src", "../images/mobile-pikachhu.png");
+  imgNotFound.setAttribute("src", pikaMobile);
   // @ts-ignore
   messageWrapper.appendChild(imgNotFound);
   messageWrapper.appendChild(pMessage);

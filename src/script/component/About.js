@@ -1,3 +1,18 @@
+// @ts-ignore
+import pokeapi from "../../images/pokeapi.png";
+// @ts-ignore
+import photo from "../../images/photo.png";
+// @ts-ignore
+import fb from "../../images/fb.png";
+// @ts-ignore
+import twit from "../../images/twit.png";
+// @ts-ignore
+import mail from "../../images/mail.png";
+// @ts-ignore
+import ig from "../../images/ig.png";
+// @ts-ignore
+import githubrepo from "../../images/githubrepo.png";
+
 class About extends HTMLElement {
   constructor() {
     super();
@@ -194,7 +209,7 @@ class About extends HTMLElement {
         <div class="about-wrapper">
           <article class="about">
             <p class="title-about">Credit</p>
-            <img src="../images/pokeapi.png" alt="pokeapi" />
+            <img src="${pokeapi}" alt="pokeapi" />
             <p class="description-about">
               <a href="https://pokeapi.co/" target="_blank"
                 ><span class="r6">PokeAPI</span></a
@@ -226,18 +241,18 @@ class About extends HTMLElement {
           <aside class="isme-wrapper">
             <p class="title-isme">It's Me</p>
             <div class="bio-wrapper">
-              <img class="photo-profil" src="../images/photo.png" alt="pp" />
+              <img class="photo-profil" src="${photo}" alt="pp" />
               <p class="name">Rizki Izzul Haq</p>
               <p class="address">Jawa Tengah - Indonesia</p>
               <ul class="sosmed-wrapper">
                 <li>
                   <a href="http://twitter.com/rizkyizh_" target="_blank"
-                    ><img src="../images/twit.png" alt="twitter"
+                    ><img src="${twit}" alt="twitter"
                   /></a>
                 </li>
                 <li>
                   <a href="http://facebook.com/moekanaeru" target="_blank"
-                    ><img src="../images/fb.png" alt="fb"
+                    ><img src="${fb}" alt="fb"
                   /></a>
                 </li>
                 <li>
@@ -245,18 +260,18 @@ class About extends HTMLElement {
                     href="http://instagram.com/rizky.izh"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><img src="../images/ig.png" alt="ig"
+                    ><img src="${ig}" alt="ig"
                   /></a>
                 </li>
                 <li>
                   <a href="http://" target="_blank"
-                    ><img src="../images/mail.png" alt="email"
+                    ><img src="${mail}" alt="email"
                   /></a>
                 </li>
               </ul>
               <button class="btn-repo">
                 <a href="http://github.com/rizkyizh" target="_blank"
-                  ><img src="../images/githubrepo.png" alt="repo-github"
+                  ><img src="${githubrepo}" alt="repo-github"
                 /></a>
               </button>
             </div>
