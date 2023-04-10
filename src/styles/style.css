@@ -14,26 +14,6 @@
   --color5: #7289da;
   --color6: #ee4e36;
   --color7: #ffd73e;
-
-  /* pokemon color */
-  --fire: #ee8130;
-  --grass: #7ac74c;
-  --eletric: #f7d02c;
-  --water: #6390f0;
-  --ground: #e2bf65;
-  --rock: #b6a136;
-  --fairy: #d685ad;
-  --poison: #a33ea1;
-  --bug: #a6b91a;
-  --dragon: #6f35fc;
-  --psychic: #f95587;
-  --flying: #a98ff3;
-  --fighting: #c22e28;
-  --normal: #a8a77a;
-  --ice: #96d9d6;
-  --ghost: #735797;
-  --dark: #705746;
-  --steel: #b7b7ce;
 }
 
 * .r6 {
@@ -66,7 +46,6 @@ body {
   max-width: 960px;
   margin: auto;
   height: inherit;
-  /* background-color: #6390f0; */
 }
 
 .hide {
@@ -90,7 +69,6 @@ main {
 }
 
 .left-aside .btn-search-wrapper {
-  /* width: 309px; */
   height: 60px;
   background-color: var(--color1);
   margin-bottom: 25px;
@@ -128,7 +106,6 @@ main {
 }
 
 .left-aside .detail-char-wrapper {
-  /* width: 309px; */
   height: 547px;
   background-color: var(--color1);
   padding: 25px;
@@ -148,7 +125,6 @@ main {
 }
 
 .detail-char-wrapper .table-wrapper {
-  /* width: 100; */
   height: 249px;
   background-color: var(--color2);
   padding: 20px;
@@ -164,10 +140,6 @@ main {
   overflow: hidden;
 }
 
-/* .border-bottom-tr td {
-  border-bottom: 1px solid var(--color3);
-  border-top: 1px solid var(--color3);
-} */
 /* aside-end */
 
 /* right content */
@@ -187,8 +159,6 @@ main {
   flex: 2;
   background-color: var(--color1);
   height: 693px;
-  /* width: 640px; */
-  /* margin-left: 25px; */
 }
 
 .right-content .content-header {

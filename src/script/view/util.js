@@ -15,25 +15,6 @@ const countResults = (pokemonList) => {
   footerContent?.insertBefore(countEl, referenceEl);
 };
 
-// const renderDetailStatCard = (res) => {
-//   const img = res.sprites.other.dream_world.front_default;
-//   const name = res.name;
-//   const id = res.id;
-//   const height = res.height;
-//   const weight = res.weight;
-//   const type = res.types[0].type.name;
-//   // stats
-//   const hp = res.stats[0].base_stat;
-//   const atk = res.stats[1].base_stat;
-//   const def = res.stats[2].base_stat;
-//   const spAtk = res.stats[3].base_stat;
-//   const spDef = res.stats[4].base_stat;
-//   const speed = res.stats[5].base_stat;
-//   const ability = res.abilities[0].ability.name;
-
-//   const urlEffectShort = res.abilities[0].ability.url;
-// };
-
 const renderDetailStatCard = ({
   sprites: {
     other: {
@@ -154,7 +135,6 @@ const renderCard = (res) => {
       namaHoverEl.innerHTML = namaPoke;
     });
     e.addEventListener("click", function () {
-      console.log(e.getAttribute("dataId"));
       const pokeNameId = e.getAttribute("dataId");
 
       DataSource.getPokemonURLID(
@@ -185,7 +165,6 @@ const renderError = (error) => {
   const imgNotFound = document.createElement("img");
   messageWrapper.setAttribute("class", "error-message");
   pMessage.innerHTML = "404 Not Found";
-  // imgNotFound.setAttribute("class", "error-message");
   imgNotFound.setAttribute("src", "../images/mobile-pikachhu.png");
   // @ts-ignore
   messageWrapper.appendChild(imgNotFound);

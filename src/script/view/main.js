@@ -1,6 +1,13 @@
 import "../../images/nextButton.png";
 import "../../images/searchbutton.png";
 import "../../images/mobile-pikachhu.png";
+import "../../images/pokeapi.png";
+import "../../images/photo.png";
+import "../../images/fb.png";
+import "../../images/twit.png";
+import "../../images/mail.png";
+import "../../images/ig.png";
+import "../../images/githubrepo.png";
 import DataSource from "../controller/DataSource.js";
 import {
   countResults,
