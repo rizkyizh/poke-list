@@ -40,6 +40,7 @@ module.exports = {
             options: {
               limit: 8192, // batas ukuran file
               name: "[name].[hash:7].[ext]", // nama file output
+              outputPath: 'assets/',
               encoding: "base64", // format encoding file
               fallback: "file-loader", // fallback ke file-loader jika ukuran file melebihi batas
             },

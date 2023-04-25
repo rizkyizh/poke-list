@@ -1,10 +1,8 @@
-import "./styles/style.css";
-import "./script/component/AppBar.js";
-import "./script/component/Hero.js";
-import "./script/component/Footer.js";
-import "./script/component/About.js";
-// @ts-ignore
+import './styles/style.css';
+import './script/component/AppBar.js';
+import './script/component/Hero.js';
+import './script/component/Footer.js';
+import './script/component/About.js';
+import main from './script/view/main.js';
 
-import main from "./script/view/main.js";
-
-document.addEventListener("DOMContentLoaded", main);
+document.addEventListener('DOMContentLoaded', main);

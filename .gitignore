@@ -1,3 +1,7 @@
 node_modules/
 *.vscode
 *.npmrc
+*.common.js
+*.dev.js
+*.prod.js
+*.eslintrc.json

@@ -1,22 +1,15 @@
-// @ts-ignore
-import pokeapi from "../../images/pokeapi.png";
-// @ts-ignore
-import photo from "../../images/photo.png";
-// @ts-ignore
-import fb from "../../images/fb.png";
-// @ts-ignore
-import twit from "../../images/twit.png";
-// @ts-ignore
-import mail from "../../images/mail.png";
-// @ts-ignore
-import ig from "../../images/ig.png";
-// @ts-ignore
-import githubrepo from "../../images/githubrepo.png";
+import pokeapi from '../../images/pokeapi.png';
+import photo from '../../images/photo.png';
+import fb from '../../images/fb.png';
+import twit from '../../images/twit.png';
+import mail from '../../images/mail.png';
+import ig from '../../images/ig.png';
+import githubrepo from '../../images/githubrepo.png';
 
 class About extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: "open" });
+    this._shadowRoot = this.attachShadow({ mode: 'open' });
     this.styles = `
     * .r6 {
     color: var(--color6);
@@ -283,4 +276,4 @@ class About extends HTMLElement {
   }
 }
 
-customElements.define("about-app", About);
+customElements.define('about-app', About);

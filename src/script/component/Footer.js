@@ -1,7 +1,7 @@
 class Footer extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: "open" });
+    this._shadowRoot = this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -50,4 +50,4 @@ class Footer extends HTMLElement {
   }
 }
 
-customElements.define("footer-app", Footer);
+customElements.define('footer-app', Footer);

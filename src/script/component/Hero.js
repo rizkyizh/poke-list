@@ -1,16 +1,12 @@
-// @ts-ignore
-import hero_display from "../../images/hero.svg";
-// @ts-ignore
-import hero_mobile from "../../images/mobile-pikachhu.svg";
-// @ts-ignore
-import btnStartHover from "../../images/home-start-btn-Hover.svg";
-// @ts-ignore
-import btnStart from "../../images/home-start-btn.svg";
+import heroDisplay from '../../images/hero.svg';
+import heroMobile from '../../images/mobile-pikachhu.svg';
+import btnStartHover from '../../images/home-start-btn-Hover.svg';
+import btnStart from '../../images/home-start-btn.svg';
 
 class Hero extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: "open" });
+    this._shadowRoot = this.attachShadow({ mode: 'open' });
     this.render();
     this.styles = `
     * {
@@ -131,7 +127,7 @@ class Hero extends HTMLElement {
           display: inline-block;
           width: 200px;
           height: 200px;
-          background-image: url(${hero_mobile});
+          background-image: url(${heroMobile});
           background-repeat: no-repeat;
         }
       }
@@ -139,7 +135,7 @@ class Hero extends HTMLElement {
       @media (min-width: 746px) {
         .hero .hero-bg {
           /* bg pikachu */
-          background-image: url(${hero_display});
+          background-image: url(${heroDisplay});
         }
       
         .hero-wrapper {
@@ -167,6 +163,7 @@ class Hero extends HTMLElement {
       
     `;
   }
+
   connectedCallback() {
     this.render();
   }
@@ -202,9 +199,9 @@ class Hero extends HTMLElement {
   }
 
   event() {
-    const startButton = this._shadowRoot.querySelector(".cta");
-    startButton?.addEventListener("click", () => {
-      const href = startButton.getAttribute("href");
+    const startButton = this._shadowRoot.querySelector('.cta');
+    startButton?.addEventListener('click', () => {
+      const href = startButton.getAttribute('href');
       if (href) {
         window.location.href = href;
       }
@@ -212,4 +209,4 @@ class Hero extends HTMLElement {
   }
 }
 
-customElements.define("hero-app", Hero);
+customElements.define('hero-app', Hero);

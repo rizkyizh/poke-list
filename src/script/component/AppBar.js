@@ -1,15 +1,12 @@
-// @ts-ignore
-import pokelogoball from "../../images/pokelogoball.png";
-// @ts-ignore
-import humbrMenu from "../../images/humburgerMenu.png";
-// @ts-ignore
-import humbrMenuExit from "../../images/humbuergerMenu-exit.png";
+import pokelogoball from '../../images/pokelogoball.png';
+import humbrMenu from '../../images/humburgerMenu.png';
+import humbrMenuExit from '../../images/humbuergerMenu-exit.png';
 
 class AppBar extends HTMLElement {
   constructor() {
     super();
 
-    this._shadowRoot = this.attachShadow({ mode: "open" });
+    this._shadowRoot = this.attachShadow({ mode: 'open' });
     this.styles = `
     * {
     padding: 0;
@@ -179,20 +176,20 @@ class AppBar extends HTMLElement {
 
   event() {
     this._shadowRoot
-      .querySelector(".hamburger-menu")
-      ?.addEventListener("click", () => {
+      .querySelector('.hamburger-menu')
+      ?.addEventListener('click', () => {
         this._shadowRoot
-          .querySelector(".nav-list-wrapper")
-          ?.classList.toggle("hidden");
+          .querySelector('.nav-list-wrapper')
+          ?.classList.toggle('hidden');
 
         this._shadowRoot
-          .querySelector(".img-toggle-exit")
-          ?.classList.toggle("hidden");
+          .querySelector('.img-toggle-exit')
+          ?.classList.toggle('hidden');
 
         this._shadowRoot
-          .querySelector(".img-toggle")
-          ?.classList.toggle("hidden");
+          .querySelector('.img-toggle')
+          ?.classList.toggle('hidden');
       });
   }
 }
-customElements.define("app-bar", AppBar);
+customElements.define('app-bar', AppBar);
