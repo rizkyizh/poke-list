@@ -1,7 +1,7 @@
 node_modules/
 *.vscode
 *.npmrc
-*.common.js
-*.dev.js
-*.prod.js
 *.eslintrc.json
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
